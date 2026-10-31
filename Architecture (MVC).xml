@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Architecture (MVC)" id="arch">
+    <mxGraphModel dx="1321" dy="686" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="user" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=8;fillColor=#ffffff;strokeColor=#000000;verticalAlign=middle;spacingTop=0;" value="User&lt;br&gt;(Guest / Customer / Admin)&lt;br&gt;Browser" vertex="1">
+          <mxGeometry height="60" width="150" x="40" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=8;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;b&gt;Controller&lt;/b&gt;&lt;br&gt;&lt;br&gt;AuthController&lt;br&gt;RoomController&lt;br&gt;BookingController&lt;br&gt;ProfileController&lt;br&gt;PaymentController&lt;br&gt;ReviewController&lt;br&gt;Admin controllers (room, booking, customer, dashboard)" vertex="1">
+          <mxGeometry height="220" width="240" x="280" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="model" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=8;fillColor=#d5e8d4;strokeColor=#82b366;" value="&lt;b&gt;Model&lt;/b&gt;&lt;br&gt;&lt;br&gt;User, Room, RoomType, Facility,&lt;br&gt;Booking, Payment, Review,&lt;br&gt;DiscountCode, Notification&lt;br&gt;(data + business rules BR-01..BR-10)&lt;br&gt;DAO classes do the CRUD&lt;br&gt;&lt;br&gt;Service interfaces:&lt;br&gt;PaymentGatewayService, EmailService" vertex="1">
+          <mxGeometry height="220" width="280" x="680" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="view" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=8;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;b&gt;View&lt;/b&gt;&lt;br&gt;&lt;br&gt;HTML pages / templates&lt;br&gt;(no business rules, no SQL)" vertex="1">
+          <mxGeometry height="110" width="240" x="280" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="db" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Database&lt;br&gt;(relational DBMS)" vertex="1">
+          <mxGeometry height="110" width="160" x="740" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="pay" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=8;fillColor=#f8cecc;strokeColor=#b85450;verticalAlign=middle;spacingTop=0;" value="Payment Gateway&lt;br&gt;(sandbox, external)" vertex="1">
+          <mxGeometry height="60" width="200" x="1120" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="mail" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=8;fillColor=#f8cecc;strokeColor=#b85450;verticalAlign=middle;spacingTop=0;" value="Email Service&lt;br&gt;(SMTP, external)" vertex="1">
+          <mxGeometry height="60" width="200" x="1120" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;startFill=0;endFill=0;labelBackgroundColor=#ffffff;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.41;entryDx=0;entryDy=0;" target="ctrl" value="(1) request">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="ctrl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=block;endArrow=block;startFill=0;endFill=0;labelBackgroundColor=#ffffff;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="model" value="(2) manipulate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="ctrl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;startFill=0;endFill=0;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="view" value="(3) send data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" edge="1" parent="1" source="view" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;startFill=0;endFill=0;labelBackgroundColor=#ffffff;fontSize=11;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="user" value="(4) response">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" edge="1" parent="1" source="model" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=block;endArrow=block;startFill=0;endFill=0;labelBackgroundColor=#ffffff;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="db" value="CRUD">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" edge="1" parent="1" source="model" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=block;endArrow=block;startFill=0;endFill=0;labelBackgroundColor=#ffffff;fontSize=11;exitX=1;exitY=0.18;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="pay" value="payment request / verified result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" edge="1" parent="1" source="model" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;startFill=0;endFill=0;labelBackgroundColor=#ffffff;fontSize=11;exitX=1;exitY=0.82;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="mail" value="send notification (after commit)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=11;" value="Flow follows the MVC model of Chapter 3: (1) request, (2) manipulate, (3) send data model, (4) response.&lt;br&gt;Paid status is written only after the gateway result is verified (BR-07). A failed email never cancels a booking (BR-10)." vertex="1">
+          <mxGeometry height="50" width="800" x="40" y="640" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
