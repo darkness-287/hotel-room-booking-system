@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Architecture (MVC)" id="arch-mvc-bw">
+    <mxGraphModel dx="2575" dy="1425" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="user-box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;" value="User&#xa;(Guest / Customer / Admin)&#xa;Browser" vertex="1">
+          <mxGeometry height="75" width="150" x="40" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="controller-box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;verticalAlign=top;spacingTop=10;" value="&lt;b&gt;Controller&lt;/b&gt;&#xa;&#xa;AuthController&#xa;RoomController&#xa;BookingController&#xa;ProfileController&#xa;PaymentController&#xa;ReviewController&#xa;Admin controllers (room, booking, customer,&#xa;dashboard)" vertex="1">
+          <mxGeometry height="250" width="230" x="260" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="model-box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;verticalAlign=top;spacingTop=10;" value="&lt;b&gt;Model&lt;/b&gt;&#xa;&#xa;User, Room, RoomType, RoomImage,&#xa;Facility, RoomFacility, Booking, Payment,&#xa;Review, DiscountCode, Notification&#xa;(data + business rules BR-01..BR-10)&#xa;DAO classes do the CRUD&#xa;&#xa;Service interfaces:&#xa;PaymentGatewayService, EmailService" vertex="1">
+          <mxGeometry height="250" width="260" x="600" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="view-box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;" value="&lt;b&gt;View&lt;/b&gt;&#xa;&#xa;HTML pages / templates&#xa;(no business rules, no SQL)" vertex="1">
+          <mxGeometry height="120" width="230" x="260" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="db-cylinder" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;" value="Database&#xa;(relational DBMS)" vertex="1">
+          <mxGeometry height="120" width="170" x="645" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="payment-gateway-box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;" value="Payment Gateway&#xa;(sandbox, external)" vertex="1">
+          <mxGeometry height="75" width="170" x="1170" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="email-service-box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;" value="Email Service&#xa;(SMTP, external)" vertex="1">
+          <mxGeometry height="75" width="170" x="1050" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-request" edge="1" parent="1" source="user-box" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;fontFamily=Arial;fontSize=11;" target="controller-box" value="(1) request">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-manipulate" edge="1" parent="1" source="controller-box" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=block;startFill=0;endArrow=block;endFill=0;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;fontFamily=Arial;fontSize=11;" target="model-box" value="(2) manipulate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-send-data" edge="1" parent="1" source="controller-box" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;fontFamily=Arial;fontSize=11;" target="view-box" value="(3) send data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-response" edge="1" parent="1" source="view-box" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;fontFamily=Arial;fontSize=11;" target="user-box" value="(4) response">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-crud" edge="1" parent="1" source="model-box" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=block;startFill=0;endArrow=block;endFill=0;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;fontFamily=Arial;fontSize=11;" target="db-cylinder" value="CRUD">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-payment" edge="1" parent="1" source="model-box" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.18;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=block;startFill=0;endArrow=block;endFill=0;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;fontFamily=Arial;fontSize=11;" target="payment-gateway-box" value="payment request / verified result">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910" y="85" />
+              <mxPoint x="910" y="58" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-email" edge="1" parent="1" source="model-box" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.79;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=open;endFill=0;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=#ffffff;fontFamily=Arial;fontSize=11;" target="email-service-box" value="send notification (after commit)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
