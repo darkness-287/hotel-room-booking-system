@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0">
+  <diagram id="hotel-db-schema" name="Database Schema (11 Tables)">
+    <mxGraphModel dx="1493" dy="826" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tbl-user" parent="1" style="shape=table;startSize=28;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;" value="User" vertex="1">
+          <mxGeometry height="220" width="260" x="40" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="user-r1" parent="tbl-user" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="28" width="260" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="user-r1-c1" parent="user-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="PK" vertex="1">
+          <mxGeometry height="28" width="45" as="geometry">
+            <mxRectangle height="28" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="user-r1-c2" parent="user-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=4;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="userID: int" vertex="1">
+          <mxGeometry height="28" width="215" x="45" as="geometry">
+            <mxRectangle height="28" width="215" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="user-r2" parent="tbl-user" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="164" width="260" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="user-r2-c1" parent="user-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="&#xa;UQ&#xa;&#xa;&#xa;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="164" width="45" as="geometry">
+            <mxRectangle height="164" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="user-r2-c2" parent="user-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="fullName: varchar(30)&#xa;email: varchar(60) (NOT NULL)&#xa;phone: varchar(15)&#xa;passwordHash: varchar(255)&#xa;role: varchar(8)&#xa;accountStatus: varchar(8)&#xa;createdAt: datetime" vertex="1">
+          <mxGeometry height="164" width="215" x="45" as="geometry">
+            <mxRectangle height="164" width="215" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl-discount" parent="1" style="shape=table;startSize=28;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;" value="DiscountCode" vertex="1">
+          <mxGeometry height="250" width="260" x="40" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="disc-r1" parent="tbl-discount" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="28" width="260" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="disc-r1-c1" parent="disc-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="PK" vertex="1">
+          <mxGeometry height="28" width="45" as="geometry">
+            <mxRectangle height="28" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="disc-r1-c2" parent="disc-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=4;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="discountID: int" vertex="1">
+          <mxGeometry height="28" width="215" x="45" as="geometry">
+            <mxRectangle height="28" width="215" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="disc-r2" parent="tbl-discount" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="194" width="260" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="disc-r2-c1" parent="disc-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="UQ&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="194" width="45" as="geometry">
+            <mxRectangle height="194" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="disc-r2-c2" parent="disc-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="code: varchar(20)&#xa;discountType: varchar(7)&#xa;discountValue: decimal(10,2)&#xa;minAmount: decimal(10,2)&#xa;startDate: date&#xa;expiryDate: date&#xa;usageLimit: int&#xa;usedCount: int&#xa;status: varchar(8)" vertex="1">
+          <mxGeometry height="194" width="215" x="45" as="geometry">
+            <mxRectangle height="194" width="215" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl-roomimage" parent="1" style="shape=table;startSize=28;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;" value="RoomImage" vertex="1">
+          <mxGeometry height="115" width="260" x="40" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="img-r1" parent="tbl-roomimage" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="28" width="260" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="img-r1-c1" parent="img-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="PK" vertex="1">
+          <mxGeometry height="28" width="45" as="geometry">
+            <mxRectangle height="28" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="img-r1-c2" parent="img-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=4;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="imageID: int" vertex="1">
+          <mxGeometry height="28" width="215" x="45" as="geometry">
+            <mxRectangle height="28" width="215" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="img-r2" parent="tbl-roomimage" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="59" width="260" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="img-r2-c1" parent="img-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="FK&#xa;" vertex="1">
+          <mxGeometry height="59" width="45" as="geometry">
+            <mxRectangle height="59" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="img-r2-c2" parent="img-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="roomID: int&#xa;imageUrl: varchar(255)" vertex="1">
+          <mxGeometry height="59" width="215" x="45" as="geometry">
+            <mxRectangle height="59" width="215" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl-booking" parent="1" style="shape=table;startSize=28;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;" value="Booking" vertex="1">
+          <mxGeometry height="310" width="300" x="390" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="book-r1" parent="tbl-booking" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="28" width="300" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="book-r1-c1" parent="book-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="PK" vertex="1">
+          <mxGeometry height="28" width="45" as="geometry">
+            <mxRectangle height="28" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="book-r1-c2" parent="book-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=4;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="bookingID: int" vertex="1">
+          <mxGeometry height="28" width="255" x="45" as="geometry">
+            <mxRectangle height="28" width="255" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="book-r2" parent="tbl-booking" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="254" width="300" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="book-r2-c1" parent="book-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="FK&#xa;FK&#xa;FK&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="254" width="45" as="geometry">
+            <mxRectangle height="254" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="book-r2-c2" parent="book-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="userID: int&#xa;roomID: int&#xa;discountID: int (NULL)&#xa;checkInDate: date&#xa;checkOutDate: date (&gt; checkInDate)&#xa;numGuests: int (&gt; 0)&#xa;pricePerNight: decimal(10,2) (&gt;= 0)&#xa;discountAmount: decimal(10,2) (&gt;= 0)&#xa;totalPrice: decimal(10,2) (&gt;= 0)&#xa;bookingStatus: varchar(9)&#xa;createdAt: datetime&#xa;cancelledAt: datetime (NULL)" vertex="1">
+          <mxGeometry height="254" width="255" x="45" as="geometry">
+            <mxRectangle height="254" width="255" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl-room" parent="1" style="shape=table;startSize=28;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;" value="Room" vertex="1">
+          <mxGeometry height="195" width="300" x="390" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="room-r1" parent="tbl-room" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="28" width="300" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="room-r1-c1" parent="room-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="PK" vertex="1">
+          <mxGeometry height="28" width="45" as="geometry">
+            <mxRectangle height="28" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="room-r1-c2" parent="room-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=4;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="roomID: int" vertex="1">
+          <mxGeometry height="28" width="255" x="45" as="geometry">
+            <mxRectangle height="28" width="255" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="room-r2" parent="tbl-room" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="139" width="300" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="room-r2-c1" parent="room-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="FK&#xa;UQ&#xa;&#xa;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="139" width="45" as="geometry">
+            <mxRectangle height="139" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="room-r2-c2" parent="room-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="roomTypeID: int&#xa;roomNumber: varchar(6)&#xa;floor: int&#xa;description: varchar(500)&#xa;pricePerNight: decimal(10,2)&#xa;status: varchar(11)" vertex="1">
+          <mxGeometry height="139" width="255" x="45" as="geometry">
+            <mxRectangle height="139" width="255" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl-roomtype" parent="1" style="shape=table;startSize=28;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;" value="RoomType" vertex="1">
+          <mxGeometry height="150" width="300" x="390" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="rt-r1" parent="tbl-roomtype" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="28" width="300" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="rt-r1-c1" parent="rt-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="PK" vertex="1">
+          <mxGeometry height="28" width="45" as="geometry">
+            <mxRectangle height="28" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rt-r1-c2" parent="rt-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=4;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="roomTypeID: int" vertex="1">
+          <mxGeometry height="28" width="255" x="45" as="geometry">
+            <mxRectangle height="28" width="255" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rt-r2" parent="tbl-roomtype" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="94" width="300" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="rt-r2-c1" parent="rt-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="UQ&#xa;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="94" width="45" as="geometry">
+            <mxRectangle height="94" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rt-r2-c2" parent="rt-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="name: varchar(30)&#xa;description: varchar(500)&#xa;capacity: int&#xa;basePrice: decimal(10,2)" vertex="1">
+          <mxGeometry height="94" width="255" x="45" as="geometry">
+            <mxRectangle height="94" width="255" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl-payment" parent="1" style="shape=table;startSize=28;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;" value="Payment" vertex="1">
+          <mxGeometry height="220" width="275" x="780" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pay-r1" parent="tbl-payment" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="28" width="275" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="pay-r1-c1" parent="pay-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="PK" vertex="1">
+          <mxGeometry height="28" width="45" as="geometry">
+            <mxRectangle height="28" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pay-r1-c2" parent="pay-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=4;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="paymentID: int" vertex="1">
+          <mxGeometry height="28" width="230" x="45" as="geometry">
+            <mxRectangle height="28" width="230" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pay-r2" parent="tbl-payment" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="164" width="275" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="pay-r2-c1" parent="pay-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="FK&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="164" width="45" as="geometry">
+            <mxRectangle height="164" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pay-r2-c2" parent="pay-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="bookingID: int&#xa;amount: decimal(10,2)&#xa;method: varchar(10)&#xa;transactionRef: varchar(40)&#xa;paymentStatus: varchar(8)&#xa;paidAt: datetime (NULL)&#xa;createdAt: datetime" vertex="1">
+          <mxGeometry height="164" width="230" x="45" as="geometry">
+            <mxRectangle height="164" width="230" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl-review" parent="1" style="shape=table;startSize=28;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;" value="Review" vertex="1">
+          <mxGeometry height="175" width="275" x="780" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="rev-r1" parent="tbl-review" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="28" width="275" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="rev-r1-c1" parent="rev-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="PK" vertex="1">
+          <mxGeometry height="28" width="50" as="geometry">
+            <mxRectangle height="28" width="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rev-r1-c2" parent="rev-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=4;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="reviewID: int" vertex="1">
+          <mxGeometry height="28" width="225" x="50" as="geometry">
+            <mxRectangle height="28" width="225" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rev-r2" parent="tbl-review" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="119" width="275" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="rev-r2-c1" parent="rev-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="FK,UQ&#xa;FK&#xa;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="119" width="50" as="geometry">
+            <mxRectangle height="119" width="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rev-r2-c2" parent="rev-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="bookingID: int (UNIQUE)&#xa;roomID: int&#xa;rating: int (CHECK 1..5)&#xa;comment: varchar(500)&#xa;createdAt: datetime" vertex="1">
+          <mxGeometry height="119" width="225" x="50" as="geometry">
+            <mxRectangle height="119" width="225" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl-roomfacility" parent="1" style="shape=table;startSize=28;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;" value="Room_Facility" vertex="1">
+          <mxGeometry height="90" width="275" x="780" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="rf-r1" parent="tbl-roomfacility" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="62" width="275" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="rf-r1-c1" parent="rf-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="PK,FK&#xa;PK,FK" vertex="1">
+          <mxGeometry height="62" width="50" as="geometry">
+            <mxRectangle height="62" width="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rf-r1-c2" parent="rf-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=4;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="roomID: int&#xa;facilityID: int" vertex="1">
+          <mxGeometry height="62" width="225" x="50" as="geometry">
+            <mxRectangle height="62" width="225" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl-notification" parent="1" style="shape=table;startSize=28;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;" value="Notification" vertex="1">
+          <mxGeometry height="195" width="260" x="1140" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="notif-r1" parent="tbl-notification" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="28" width="260" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="notif-r1-c1" parent="notif-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="PK" vertex="1">
+          <mxGeometry height="28" width="45" as="geometry">
+            <mxRectangle height="28" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="notif-r1-c2" parent="notif-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=4;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="notificationID: int" vertex="1">
+          <mxGeometry height="28" width="215" x="45" as="geometry">
+            <mxRectangle height="28" width="215" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="notif-r2" parent="tbl-notification" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="139" width="260" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="notif-r2-c1" parent="notif-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="FK&#xa;&#xa;&#xa;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="139" width="45" as="geometry">
+            <mxRectangle height="139" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="notif-r2-c2" parent="notif-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;verticalAlign=top;spacingTop=6;" value="bookingID: int&#xa;eventType: varchar(17)&#xa;recipientEmail: varchar(60)&#xa;message: varchar(500)&#xa;status: varchar(6)&#xa;sentAt: datetime" vertex="1">
+          <mxGeometry height="139" width="215" x="45" as="geometry">
+            <mxRectangle height="139" width="215" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tbl-facility" parent="1" style="shape=table;startSize=28;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=12;" value="Facility" vertex="1">
+          <mxGeometry height="90" width="260" x="1140" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="fac-r1" parent="tbl-facility" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="28" width="260" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="fac-r1-c1" parent="fac-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="PK" vertex="1">
+          <mxGeometry height="28" width="45" as="geometry">
+            <mxRectangle height="28" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fac-r1-c2" parent="fac-r1" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=4;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="facilityID: int" vertex="1">
+          <mxGeometry height="28" width="215" x="45" as="geometry">
+            <mxRectangle height="28" width="215" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fac-r2" parent="tbl-facility" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="34" width="260" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="fac-r2-c1" parent="fac-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=1;fontStyle=1;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="UQ" vertex="1">
+          <mxGeometry height="34" width="45" as="geometry">
+            <mxRectangle height="34" width="45" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fac-r2-c2" parent="fac-r2" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#000000;fontColor=#000000;fontFamily=Arial;fontSize=11;" value="name: varchar(30)" vertex="1">
+          <mxGeometry height="34" width="215" x="45" as="geometry">
+            <mxRectangle height="34" width="215" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-user-booking" edge="1" parent="1" source="tbl-user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#000000;" target="tbl-booking">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-discount-booking" edge="1" parent="1" source="tbl-discount" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;startArrow=ERzeroToOne;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#000000;" target="tbl-booking">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-room-booking" edge="1" parent="1" source="tbl-room" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#000000;" target="tbl-booking">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-roomtype-room" edge="1" parent="1" source="tbl-roomtype" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#000000;" target="tbl-room">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-room-roomimage" edge="1" parent="1" source="tbl-room" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#000000;" target="tbl-roomimage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-booking-payment" edge="1" parent="1" source="tbl-booking" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#000000;" target="tbl-payment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-booking-notification" edge="1" parent="1" source="tbl-booking" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.8;exitDx=0;exitDy=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#000000;" target="tbl-notification">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-booking-review" edge="1" parent="1" source="tbl-booking" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.92;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToOne;endFill=0;strokeColor=#000000;" target="tbl-review">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-room-review" edge="1" parent="1" source="tbl-room" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.45;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#000000;" target="tbl-review">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-room-roomfacility" edge="1" parent="1" source="tbl-room" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.85;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#000000;" target="tbl-roomfacility">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-facility-roomfacility" edge="1" parent="1" source="tbl-facility" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#000000;" target="tbl-roomfacility">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
